@@ -19,7 +19,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/45 to-ink-950/25" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/30 to-transparent" />
 
-        <div className="container-x relative w-full pb-20 pt-36 sm:pb-28">
+        <div className="container-x relative w-full pb-14 pt-28 sm:pb-24 sm:pt-36">
           <Reveal>
             <p className="eyebrow text-ember-400">{company.tagline}</p>
           </Reveal>
@@ -37,7 +37,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={240}>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/65">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65 sm:mt-8 sm:text-lg">
               Chassis and spring components for commercial vehicles, tractors and
               agricultural implements. Made under an ISO 9001:2015 quality system, whether
               it comes from our catalogue or your drawing.
@@ -45,10 +45,10 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={360}>
-            <div className="mt-11 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-col gap-3 sm:mt-11 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <Link
                 href="/products"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-ember-500 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-ember-400 hover:shadow-[0_8px_30px_-6px] hover:shadow-ember-500/50"
+                className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-ember-500 px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-ember-400 hover:shadow-[0_8px_30px_-6px] hover:shadow-ember-500/50 sm:w-auto sm:py-3.5"
               >
                 See the full range
                 <svg
@@ -64,7 +64,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/contact"
-                className="rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white/90 backdrop-blur-sm transition-all duration-300 hover:border-white/45 hover:bg-white/5"
+                className="w-full rounded-full border border-white/20 px-7 py-4 text-center text-sm font-semibold text-white/90 backdrop-blur-sm transition-all duration-300 hover:border-white/45 hover:bg-white/5 sm:w-auto sm:py-3.5"
               >
                 Send your specification
               </Link>
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* ---------------- Statement ---------------- */}
-      <section className="container-x py-28 sm:py-40">
+      <section className="container-x py-16 sm:py-24 lg:py-32">
         <Reveal>
           <p className="eyebrow text-ember-600">Quality</p>
         </Reveal>
@@ -109,24 +109,24 @@ export default function Home() {
           </h2>
         </Reveal>
         <Reveal delay={200}>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-500">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-500 sm:mt-8 sm:text-lg">
             U-bolts, spring bushes, centre bolts, chassis hangers, hubs and axles, for
             commercial vehicles, tractors and agricultural implements.
           </p>
         </Reveal>
 
-        <div className="mt-20 grid gap-px overflow-hidden rounded-2xl bg-black/[0.07] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-black/[0.07] sm:mt-16 lg:grid-cols-4">
           {stats.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 90}>
-              <div className="h-full bg-white px-7 py-10">
-                <p className="text-4xl font-semibold tracking-tight text-ink-900 sm:text-5xl">
+              <div className="h-full bg-white px-5 py-7 sm:px-7 sm:py-10">
+                <p className="text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl lg:text-5xl">
                   {stat.count !== undefined ? (
                     <CountUp value={stat.count} suffix={stat.suffix} />
                   ) : (
                     stat.text
                   )}
                 </p>
-                <p className="mt-3 text-sm text-ink-500">{stat.label}</p>
+                <p className="mt-2 text-xs leading-snug text-ink-500 sm:mt-3 sm:text-sm">{stat.label}</p>
               </div>
             </Reveal>
           ))}
@@ -134,11 +134,12 @@ export default function Home() {
       </section>
 
       {/* ---------------- Full-bleed feature ---------------- */}
-      <section className="relative isolate min-h-[80svh] overflow-hidden bg-ink-900">
+      <section className="relative isolate min-h-[68svh] overflow-hidden bg-ink-900 sm:min-h-[80svh]">
         <Media slot={media.craftsmanship} sizes="100vw" />
-        {/* Art falls to black at the lower left, so the copy only needs a light scrim. */}
-        <div className="absolute inset-0 bg-gradient-to-br from-ink-950/85 via-ink-950/35 to-transparent" />
-        <div className="container-x relative flex min-h-[80svh] items-center py-28">
+        {/* On mobile the copy sits lower, over the bright diagonal, so the scrim runs
+            top-to-bottom there. On wider screens it can stay diagonal and lighter. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/80 via-ink-950/65 to-ink-950/85 sm:bg-gradient-to-br sm:from-ink-950/85 sm:via-ink-950/35 sm:to-transparent" />
+        <div className="container-x relative flex min-h-[68svh] items-center py-20 sm:min-h-[80svh] sm:py-28">
           <div className="max-w-xl">
             <Reveal>
               <p className="eyebrow text-ember-400">Materials</p>
@@ -149,7 +150,7 @@ export default function Home() {
               </h2>
             </Reveal>
             <Reveal delay={220}>
-              <p className="mt-7 text-lg leading-relaxed text-white/60">
+              <p className="mt-6 text-base leading-relaxed text-white/60 sm:mt-7 sm:text-lg">
                 Our components are forged, machined and heat-treated in house at our unit in
                 Ludhiana, Punjab. We have been making them this way for over twenty years.
               </p>
@@ -177,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* ---------------- Product showcase ---------------- */}
-      <section className="bg-ink-50 py-28 sm:py-36">
+      <section className="bg-ink-50 py-16 sm:py-24 lg:py-32">
         <div className="container-x">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
@@ -210,7 +211,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-5 lg:grid-cols-3">
             {showcase.map((p, i) => (
               <Reveal key={p.image} delay={(i % 3) * 100}>
                 <article className="group relative h-full overflow-hidden rounded-2xl bg-white transition-all duration-500 ease-[var(--ease-out-soft)] hover:-translate-y-1.5 hover:shadow-[0_24px_60px_-20px_rgba(0,0,0,0.22)]">
@@ -220,14 +221,14 @@ export default function Home() {
                       alt={p.name}
                       fill
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 30vw"
-                      className="object-contain p-8 transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-[1.07]"
+                      className="object-contain p-5 transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-[1.07] sm:p-8"
                     />
                   </div>
-                  <div className="px-6 pb-7 pt-1">
-                    <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-ember-600">
+                  <div className="px-4 pb-5 pt-1 sm:px-6 sm:pb-7">
+                    <p className="truncate text-[10px] font-medium uppercase tracking-[0.08em] text-ember-600 sm:tracking-[0.14em]">
                       {p.category}
                     </p>
-                    <h3 className="mt-2 text-base font-semibold tracking-tight text-ink-900">
+                    <h3 className="mt-1.5 line-clamp-2 min-h-[2.5em] text-sm font-semibold leading-snug tracking-tight text-ink-900 sm:mt-2 sm:text-base">
                       {p.name}
                     </h3>
                   </div>
@@ -239,10 +240,10 @@ export default function Home() {
       </section>
 
       {/* ---------------- Why us, split ---------------- */}
-      <section className="container-x py-28 sm:py-36">
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+      <section className="container-x py-16 sm:py-24 lg:py-32">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-24">
           <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-ink-100">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink-100 sm:rounded-3xl lg:aspect-[4/5]">
               <Media
                 slot={media.facility}
                 sizes="(max-width: 1024px) 100vw, 45vw"
@@ -261,7 +262,7 @@ export default function Home() {
               </h2>
             </Reveal>
 
-            <ul className="mt-12 divide-y divide-black/[0.07] border-y border-black/[0.07]">
+            <ul className="mt-8 divide-y divide-black/[0.07] border-y border-black/[0.07] sm:mt-12">
               {whyUs.map((w, i) => (
                 <Reveal key={w} delay={i * 70}>
                   <li className="group flex items-start gap-5 py-5">
@@ -283,29 +284,29 @@ export default function Home() {
       <section className="relative isolate overflow-hidden bg-ink-950">
         <Media slot={media.ctaBackdrop} sizes="100vw" className="opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/80 to-ink-950/60" />
-        <div className="container-x relative py-28 text-center sm:py-36">
+        <div className="container-x relative py-16 text-center sm:py-24 lg:py-32">
           <Reveal>
             <h2 className="display-lg mx-auto max-w-3xl text-white text-balance">
               Tell us what you need and we will send a quote.
             </h2>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-white/55">
+            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/55 sm:mt-7 sm:text-lg">
               Send us a part number, a drawing, or a description of what you need. We
               handle bulk and repeat orders, in India and for export.
             </p>
           </Reveal>
           <Reveal delay={230}>
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-10 flex flex-col gap-3 sm:mt-12 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-4">
               <Link
                 href="/contact"
-                className="rounded-full bg-white px-8 py-4 text-sm font-semibold text-ink-900 transition-all duration-300 hover:bg-ember-500 hover:text-white"
+                className="w-full rounded-full bg-white px-8 py-4 text-center text-sm font-semibold text-ink-900 transition-all duration-300 hover:bg-ember-500 hover:text-white sm:w-auto"
               >
                 Start an enquiry
               </Link>
               <a
                 href={`tel:${company.phones[0].tel}`}
-                className="rounded-full border border-white/20 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-white/45 hover:bg-white/5"
+                className="w-full rounded-full border border-white/20 px-8 py-4 text-center text-sm font-semibold text-white transition-all duration-300 hover:border-white/45 hover:bg-white/5 sm:w-auto"
               >
                 {company.phones[0].number}
               </a>

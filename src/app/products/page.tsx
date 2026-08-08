@@ -21,11 +21,11 @@ export default function Products() {
         slot={media.productsBanner}
       />
 
-      <section className="container-x py-16 sm:py-20">
+      <section className="container-x py-10 sm:py-16 lg:py-20">
         <ProductGrid />
       </section>
 
-      <section className="border-t border-black/[0.07] bg-ink-50 py-24">
+      <section className="border-t border-black/[0.07] bg-ink-50 py-16 sm:py-24">
         <div className="container-x text-center">
           <Reveal>
             <h2 className="display-md mx-auto max-w-2xl text-ink-900 text-balance">
@@ -33,7 +33,7 @@ export default function Products() {
             </h2>
           </Reveal>
           <Reveal delay={110}>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-500">
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-ink-500 sm:mt-6 sm:text-lg">
               We also manufacture to specification. Send us a drawing or a part number and
               we will come back with a quote.
             </p>
@@ -41,7 +41,7 @@ export default function Products() {
           <Reveal delay={220}>
             <Link
               href="/contact"
-              className="mt-10 inline-block rounded-full bg-ink-900 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-ember-500"
+              className="mt-8 inline-block w-full rounded-full bg-ink-900 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-ember-500 sm:mt-10 sm:w-auto"
             >
               Request a quote
             </Link>

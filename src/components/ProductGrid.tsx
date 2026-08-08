@@ -22,7 +22,9 @@ export default function ProductGrid() {
   return (
     <>
       {/* Sticky filter bar */}
-      <div className="sticky top-[68px] z-30 -mx-6 border-b border-black/[0.07] bg-white/85 px-6 py-4 backdrop-blur-xl backdrop-saturate-150 lg:-mx-10 lg:px-10">
+      {/* Negative margin must track container-x's padding at every breakpoint,
+          otherwise the bar overhangs and the page scrolls sideways. */}
+      <div className="sticky top-[68px] z-30 -mx-5 border-b border-black/[0.07] bg-white/85 px-5 py-4 backdrop-blur-xl backdrop-saturate-150 sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div
             role="tablist"
@@ -93,7 +95,7 @@ export default function ProductGrid() {
           </button>
         </div>
       ) : (
-        <div className="mt-6 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
           {filtered.map((p) => (
             <article
               key={p.image}
@@ -107,14 +109,14 @@ export default function ProductGrid() {
                   alt={p.name}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-contain p-7 transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-[1.08]"
+                  className="object-contain p-5 transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-[1.08] sm:p-7"
                 />
               </div>
-              <div className="px-5 pb-6">
-                <p className="text-[10px] font-medium uppercase tracking-[0.14em] text-ember-600">
+              <div className="px-4 pb-5 sm:px-5 sm:pb-6">
+                <p className="truncate text-[10px] font-medium uppercase tracking-[0.08em] text-ember-600 sm:tracking-[0.14em]">
                   {p.category}
                 </p>
-                <h2 className="mt-1.5 text-[15px] font-semibold leading-snug tracking-tight text-ink-900">
+                <h2 className="mt-1.5 line-clamp-2 min-h-[2.5em] text-sm font-semibold leading-snug tracking-tight text-ink-900 sm:text-[15px]">
                   {p.name}
                 </h2>
               </div>

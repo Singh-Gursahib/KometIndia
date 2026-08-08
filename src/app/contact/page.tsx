@@ -20,15 +20,15 @@ export default function Contact() {
         slot={media.contactBanner}
       />
 
-      <section className="container-x py-24 sm:py-32">
-        <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+      <section className="container-x py-14 sm:py-24 lg:py-32">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
           {/* Details */}
           <div>
             <Reveal>
               <h2 className="display-md text-ink-900">Our details</h2>
             </Reveal>
 
-            <dl className="mt-12 divide-y divide-black/[0.07] border-y border-black/[0.07]">
+            <dl className="mt-8 divide-y divide-black/[0.07] border-y border-black/[0.07] sm:mt-12">
               <Reveal>
                 <div className="py-6">
                   <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
@@ -85,7 +85,7 @@ export default function Contact() {
                   src={`https://maps.google.com/maps?q=${company.mapsQuery}&output=embed`}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="h-72 w-full border-0 grayscale transition-all duration-700 hover:grayscale-0"
+                  className="h-60 w-full border-0 grayscale transition-all duration-700 hover:grayscale-0 sm:h-72"
                 />
               </div>
             </Reveal>
@@ -93,7 +93,7 @@ export default function Contact() {
 
           {/* Form */}
           <Reveal delay={120}>
-            <div className="rounded-3xl border border-black/[0.07] bg-ink-50 p-8 sm:p-11">
+            <div className="rounded-2xl border border-black/[0.07] bg-ink-50 p-6 sm:rounded-3xl sm:p-11">
               <h2 className="text-2xl font-semibold tracking-tight text-ink-900">
                 Send an enquiry
               </h2>

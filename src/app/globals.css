@@ -56,7 +56,12 @@
   width: 100%;
   max-width: 80rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  /* env() keeps content clear of the notch when a phone is held in landscape. */
+  padding-inline: max(1.25rem, env(safe-area-inset-left)) max(1.25rem, env(safe-area-inset-right));
+
+  @media (min-width: 640px) {
+    padding-inline: 1.5rem;
+  }
 
   @media (min-width: 1024px) {
     padding-inline: 2.5rem;
@@ -65,8 +70,9 @@
 
 /* Apple-ish display typography: large, tight, confident */
 @utility display-xl {
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
-  line-height: 1.02;
+  /* Floor sized so "Standard range." clears a 375px viewport with margin to spare. */
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  line-height: 1.04;
   letter-spacing: -0.035em;
   font-weight: 700;
 }

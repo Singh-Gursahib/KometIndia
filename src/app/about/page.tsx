@@ -36,14 +36,14 @@ export default function About() {
       />
 
       {/* Narrative */}
-      <section className="container-x py-28 sm:py-36">
-        <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
+      <section className="container-x py-16 sm:py-24 lg:py-32">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
           <Reveal>
             <p className="eyebrow text-ember-600 lg:sticky lg:top-28">Profile</p>
           </Reveal>
-          <div className="space-y-8 text-lg leading-relaxed text-ink-500">
+          <div className="space-y-6 text-base leading-relaxed text-ink-500 sm:space-y-8 sm:text-lg">
             <Reveal>
-              <p className="text-2xl leading-snug tracking-tight text-ink-900">
+              <p className="text-xl leading-snug tracking-tight text-ink-900 sm:text-2xl">
                 {company.name} has spent over twenty years supplying a wide range of chassis
                 components for auto parts, tractor parts, motor parts and agricultural
                 implements.
@@ -68,7 +68,7 @@ export default function About() {
       </section>
 
       {/* Full-bleed image */}
-      <section className="relative isolate h-[60svh] overflow-hidden bg-ink-900">
+      <section className="relative isolate h-[42svh] overflow-hidden bg-ink-900 sm:h-[60svh]">
         {/* No copy sits on this one, and the art is bright, so it runs at full strength
             with only a soft foot to seat it against the section below. */}
         <Media slot={media.facility} sizes="100vw" />
@@ -76,7 +76,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="container-x py-28 sm:py-36">
+      <section className="container-x py-16 sm:py-24 lg:py-32">
         <Reveal>
           <p className="eyebrow text-ember-600">Values</p>
         </Reveal>
@@ -86,10 +86,10 @@ export default function About() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl bg-black/[0.07] md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-px overflow-hidden rounded-2xl bg-black/[0.07] sm:mt-16 md:grid-cols-2 lg:grid-cols-3">
           {[...values, ...principles].map((v, i) => (
             <Reveal key={v.title} delay={(i % 3) * 90}>
-              <article className="group h-full bg-white p-9 transition-colors duration-500 hover:bg-ink-50">
+              <article className="group h-full bg-white p-6 transition-colors duration-500 hover:bg-ink-50 sm:p-9">
                 <span className="text-[11px] font-semibold tabular-nums text-ember-500">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -104,10 +104,10 @@ export default function About() {
       </section>
 
       {/* Materials split */}
-      <section className="container-x pb-28 sm:pb-36">
-        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <section className="container-x pb-16 sm:pb-24 lg:pb-32">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <div className="relative aspect-[5/4] overflow-hidden rounded-3xl bg-ink-100">
+            <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-ink-100 sm:rounded-3xl">
               <Media slot={media.materials} sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
           </Reveal>
@@ -121,7 +121,7 @@ export default function About() {
               </h2>
             </Reveal>
             <Reveal delay={180}>
-              <p className="mt-7 text-lg leading-relaxed text-ink-500">
+              <p className="mt-6 text-base leading-relaxed text-ink-500 sm:mt-7 sm:text-lg">
                 Continuous change is necessary. It is what keeps us able to deliver front and
                 rear axle flanges, brake discs and chassis hangers into a market where the
                 requirement improves every year.

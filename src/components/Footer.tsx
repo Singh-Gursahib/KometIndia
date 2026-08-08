@@ -12,8 +12,8 @@ const nav = [
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-ink-950 text-white/55">
-      <div className="container-x py-20">
-        <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+      <div className="container-x py-14 sm:py-20">
+        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Image
               src="/brand/logo.png"
