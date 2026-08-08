@@ -15,8 +15,10 @@ export default function PageHero({
 }) {
   return (
     <section className="relative isolate flex min-h-[62svh] items-end overflow-hidden bg-ink-950">
-      <Media slot={slot} priority sizes="100vw" className="opacity-55" />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/75 to-ink-950/30" />
+      {/* Art runs at full strength; the scrim only protects the copy on the left. */}
+      <Media slot={slot} priority sizes="100vw" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/50 to-ink-950/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/75 via-ink-950/25 to-transparent" />
 
       <div className="container-x relative w-full pb-16 pt-36 sm:pb-20">
         {eyebrow && (

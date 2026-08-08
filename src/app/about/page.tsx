@@ -69,8 +69,10 @@ export default function About() {
 
       {/* Full-bleed image */}
       <section className="relative isolate h-[60svh] overflow-hidden bg-ink-900">
-        <Media slot={media.facility} sizes="100vw" className="opacity-70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 to-transparent" />
+        {/* No copy sits on this one, and the art is bright, so it runs at full strength
+            with only a soft foot to seat it against the section below. */}
+        <Media slot={media.facility} sizes="100vw" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/55 via-transparent to-transparent" />
       </section>
 
       {/* Values */}

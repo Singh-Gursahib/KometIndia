@@ -25,18 +25,22 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={120}>
-            <h1 className="display-xl mt-6 max-w-4xl text-white text-balance">
-              Chassis components,
+            {/* Three deliberate beats: two setup lines, then the payoff in accent.
+                Breaks are explicit so the last line never splits. */}
+            <h1 className="display-xl mt-6 text-white">
+              Standard range.
               <br />
-              <span className="text-ember-500">made in Ludhiana.</span>
+              Custom sizes.
+              <br />
+              <span className="text-ember-500">Same standard.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={240}>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/65">
-              For over two decades we have manufactured chassis components for auto parts,
-              tractor parts, motor parts and agricultural implements. We supply customers
-              across India and export overseas.
+              Chassis and spring components for commercial vehicles, tractors and
+              agricultural implements. Made under an ISO 9001:2015 quality system, whether
+              it comes from our catalogue or your drawing.
             </p>
           </Reveal>
 
@@ -46,7 +50,7 @@ export default function Home() {
                 href="/products"
                 className="group inline-flex items-center gap-2.5 rounded-full bg-ember-500 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-ember-400 hover:shadow-[0_8px_30px_-6px] hover:shadow-ember-500/50"
               >
-                Explore the range
+                See the full range
                 <svg
                   viewBox="0 0 24 24"
                   className="size-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -62,7 +66,7 @@ export default function Home() {
                 href="/contact"
                 className="rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white/90 backdrop-blur-sm transition-all duration-300 hover:border-white/45 hover:bg-white/5"
               >
-                Request a quote
+                Send your specification
               </Link>
             </div>
           </Reveal>
@@ -131,8 +135,9 @@ export default function Home() {
 
       {/* ---------------- Full-bleed feature ---------------- */}
       <section className="relative isolate min-h-[80svh] overflow-hidden bg-ink-900">
-        <Media slot={media.craftsmanship} sizes="100vw" className="opacity-55" />
-        <div className="absolute inset-0 bg-gradient-to-br from-ink-950/90 via-ink-950/50 to-transparent" />
+        <Media slot={media.craftsmanship} sizes="100vw" />
+        {/* Art falls to black at the lower left, so the copy only needs a light scrim. */}
+        <div className="absolute inset-0 bg-gradient-to-br from-ink-950/85 via-ink-950/35 to-transparent" />
         <div className="container-x relative flex min-h-[80svh] items-center py-28">
           <div className="max-w-xl">
             <Reveal>
