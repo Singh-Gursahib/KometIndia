@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="502" height="414" viewBox="0 0 502 414">
+  <title>Komet logo</title>
+  <desc>White-on-dark variant of the Komet K mark. Orange unchanged.</desc>
+
+  <!-- Orange upper-right element -->
+  <path
+    fill="#FF5E0E"
+    d="M 312 44
+       L 454 44
+       Q 457 44 454 49
+       L 286 215
+       L 219 142
+       L 309 46
+       Q 310 44 312 44 Z"/>
+
+  <!-- Main dark K element -->
+  <path
+    fill="#FFFFFF"
+    d="M 101 44
+       L 151 44
+       L 151 123
+       Q 151 126 148 129
+       L 88 196
+       Q 87 198 90 200
+       L 121 213
+       Q 134 218 149 215
+       L 218 145
+       L 299 236
+       L 453 389
+       Q 456 392 451 392
+       L 283 392
+       Q 281 392 279 390
+       L 163 281
+       Q 160 279 157 283
+       Q 152 289 152 297
+       L 152 390
+       L 87 390
+       Q 82 390 78 387
+       L 38 351
+       Q 34 347 34 341
+       L 34 111
+       Q 34 105 37 99
+       Q 40 93 45 88
+       L 72 62
+       Q 83 51 92 47
+       Q 96 45 101 44 Z"/>
+</svg>
