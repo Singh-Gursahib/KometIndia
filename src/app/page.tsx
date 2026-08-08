@@ -13,14 +13,11 @@ export default function Home() {
     <>
       {/* ---------------- Hero ---------------- */}
       <section className="relative isolate flex min-h-[92svh] items-end overflow-hidden bg-ink-950">
-        <Media
-          slot={media.heroHome}
-          priority
-          sizes="100vw"
-          className="scale-105 opacity-70"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/70 to-ink-950/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/85 to-transparent" />
+        <Media slot={media.heroHome} priority sizes="100vw" className="scale-105" />
+        {/* The art is already dark with an empty left third, so the scrim only has to
+            protect the headline and seat the bottom edge. */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/45 to-ink-950/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-ink-950/30 to-transparent" />
 
         <div className="container-x relative w-full pb-20 pt-36 sm:pb-28">
           <Reveal>
