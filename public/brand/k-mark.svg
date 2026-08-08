@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 170" role="img" aria-label="K monogram">
+  <title>K monogram</title>
+  <!-- Stem -->
+  <path fill="#2B2B2B" d="M14 12 H68 V158 H14 Z" />
+  <!-- Lower leg -->
+  <path fill="#2B2B2B" d="M68 85 L172 158 H98 L68 137 Z" />
+  <!-- Upper arm -->
+  <path fill="#FB5A17" d="M68 33 L98 12 H172 L68 85 Z" />
+</svg>
