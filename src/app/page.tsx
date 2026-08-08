@@ -28,11 +28,11 @@ export default function Home() {
             {/* Three deliberate beats: two setup lines, then the payoff in accent.
                 Breaks are explicit so the last line never splits. */}
             <h1 className="display-xl mt-6 text-white">
-              Standard range.
+              Wide range.
               <br />
               Custom sizes.
               <br />
-              <span className="text-ember-500">Same standard.</span>
+              <span className="text-ember-500">Best quality.</span>
             </h1>
           </Reveal>
 
@@ -72,8 +72,8 @@ export default function Home() {
           </Reveal>
         </div>
 
-        {/* Scroll hint */}
-        <div className="absolute bottom-8 right-6 hidden lg:block">
+        {/* Scroll hint, centred on the section rather than pinned to the right edge */}
+        <div className="absolute inset-x-0 bottom-8 hidden justify-center lg:flex">
           <div className="animate-float-slow flex flex-col items-center gap-2 text-white/30">
             <span className="text-[10px] font-medium uppercase tracking-[0.22em]">Scroll</span>
             <span className="h-10 w-px bg-gradient-to-b from-white/40 to-transparent" />
